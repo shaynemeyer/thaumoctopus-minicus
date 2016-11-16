@@ -1,0 +1,23 @@
+{
+  "name": "thaumoctopus-minicus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^15.2.0",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.2.1",
+    "run-sequence": "^1.2.2"
+  }
+}
