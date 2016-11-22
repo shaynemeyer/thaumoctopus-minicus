@@ -1,9 +1,6 @@
 import Controller from './lib/controller';
 import nunjucks from 'nunjucks';
 
-// configure nunjucks to read from the dist directory
-nunjucks.configure('./dist');
-
 function getName(request) {
   // default values
   let name = {
@@ -27,11 +24,11 @@ function getName(request) {
 export default  class HelloController extends Controller {
   toString(callback){
     // read template and compile using context object
-    nunjucks.render('index.html', getName(this.context), (err, html) => {
+    nunjucks.renderString('<p>hello {{fname}} {{lname}}</p>', getName(this.context), (err, html) => {
       if(err) {
         return callback(err, null);
       }
       callback(null, html);
-    })
+    });
   }
 }
